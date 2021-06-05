@@ -1,14 +1,14 @@
 import java.util *;
- class HotelRoom
+class HotelRoom
 { 
 String hotelName; 
 int numOfSqFeet;
- String hasTv; 
-hasWifi;
+String hasTv; 
+String hasWifi;
  public HotelRoom(String hname, int nosqft, String htv, String hwifi) 
 {
  hotelName = hname; 
-numOfSqFeet = nosqft;
+ numOfSqFeet = nosqft;
  hasTv = htv;
  this.hasWifi = hwifi; 
 } 
@@ -67,7 +67,7 @@ public static void main(String[] args)
 { 
 Scanner sc = new Scanner(System.in); 
 System.out.println("---Hotel Tariff Calculator----");
-      System.out.println(" 1. Deluxe Room \n 2. DeluxeAC Room \n 3. Suite AC     Room\n");
+System.out.println(" 1. Deluxe Room \n 2. DeluxeAC Room \n 3. Suite AC     Room\n");
  System.out.println("Select Room Type: int type = sc.nextlnt();
  if(type==l) 
 {
@@ -78,7 +78,9 @@ String tv= sc.nextLine();
 System.out.println("Room has Wifi(Yes/No)”);
 String wifi = sc.nextLine();
 DeluxeRoom dr = new
-DeluxeRoom(name,sqft,tv,wifi);	int ret = dr.getRatePerSqFt();	dr.calculateTarriff(ret);
+DeluxeRoom(name,sqft,tv,wifi);	
+int ret = dr.getRatePerSqFt();	
+dr.calculateTarriff(ret);
 }
  if(type==2)
 {	
@@ -89,8 +91,11 @@ System.out.println("Room has TV(Yes/No):”);
 String tv= sc.nextLine();
 System.out.println("Room has Wifi(Yes/No)”);
 String wifi = sc.nextLine();
-DeluxeRoom dr = new
-DeluxeRoom(name,sqft,tv,wifi);	int ret = dr.getRatePerSqFt();	dr.calculateTarriff(ret);
+DeluxeACRoom dr = new
+DeluxeACRoom(name,sqft,tv,wifi);	
+int ret = dr.getRatePerSqFt();	
+dr.calculateTarriff(ret);
 }
 }
+
 
